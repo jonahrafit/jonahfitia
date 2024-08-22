@@ -37,7 +37,7 @@ const Services = () => {
                             delay: 2.4, duration: 0.4, ease: "easeIn"
                         }
                     }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-[60px] group"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
                 >
                     {services.map((item, index) => {
                         return (
