@@ -6,6 +6,7 @@ import Nav from './Nav';
 import { Button } from './ui/button';
 import MobileNav from './MobileNav';
 import Logo from './Logo';
+import { Switch } from "@/components/ui/switch"
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -18,9 +19,7 @@ const Header: React.FC = () => {
         {/* desktop nav & hire me button*/}
         <div className='hidden xl:flex items-center gap-8'>
           <Nav />
-          <Link href="/contact">
-            <Button>Hire me</Button>
-          </Link>
+          <Switch />
         </div>
 
 
