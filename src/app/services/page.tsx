@@ -4,28 +4,38 @@ import React from "react";
 import { BsArrowDownRight } from 'react-icons/bs';
 import Link from "next/link";
 import { motion } from "framer-motion";
+import servicesData from "@/data/services.json";
 
-const services = [
-    {
-        num: '01',
-        title: 'Web Developpement',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    }, {
-        num: '02',
-        title: 'Mobile Developpement',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    }, {
-        num: '03',
-        title: 'Design',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    }, {
-        num: '04',
-        title: 'Database Administrator',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    },
-]
+// Définition du type pour un service
+interface Service {
+    num: string;
+    title: string;
+    description: string;
+}
+
+// const services = [
+//     {
+//         num: '01',
+//         title: 'Web Developpement',
+//         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
+//     }, {
+//         num: '02',
+//         title: 'Mobile Developpement',
+//         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
+//     }, {
+//         num: '03',
+//         title: 'Design',
+//         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
+//     }, {
+//         num: '04',
+//         title: 'Database Administrator',
+//         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
+//     },
+// ]
 
 const Services = () => {
+
+    const services: Service[] = servicesData;
     return (
         <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
             <div className="container mx-auto">

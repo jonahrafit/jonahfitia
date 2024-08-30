@@ -6,26 +6,14 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from 'react-icons/ci';
 import Logo from "./Logo";
-const links = [
-    {
-        name: 'home',
-        path: "/",
-    }, {
-        name: 'services',
-        path: "/services",
-    }, {
-        name: 'Resume',
-        path: "/resume",
-    }, {
-        name: 'work',
-        path: "/work",
-    }, {
-        name: 'contact',
-        path: "/contact",
-    },
-]
+import LanguageToggle from "./LanguageToggle";
+import { NavLink } from "@/interface/NavLink";
 
-const MobileNav: React.FC = () => {
+interface NavigationProps {
+    links: NavLink[];
+}
+
+const MobileNav: React.FC<NavigationProps> = ({ links }) => {
     const pathName = usePathname();
     return (
         <Sheet>
@@ -35,6 +23,9 @@ const MobileNav: React.FC = () => {
             <SheetContent className="flex flex-col">
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Logo />
+                </div>
+                <div className="flex flex-col justify-center  items-center">
+                    <LanguageToggle />
                 </div>
                 <nav className="flex flex-col justify-center items-center gap-8">
                     {links.map((link, index) => {
