@@ -3,27 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { NavLink } from "@/interface/NavLink";
 
-const links = [
-    {
-        name: 'home',
-        path: "/",
-    }, {
-        name: 'services',
-        path: "/services",
-    }, {
-        name: 'Resume',
-        path: "/resume",
-    }, {
-        name: 'work',
-        path: "/work",
-    }, {
-        name: 'contact',
-        path: "/contact",
-    },
-]
+interface NavigationProps {
+    links: NavLink[];
+}
 
-const Nav: React.FC = () => {
+const Nav: React.FC<NavigationProps> = ({ links }) => {
     const pathName = usePathname();
     return (
         <nav className="flex gap-8">

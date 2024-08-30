@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Acceuil",
+    "path": "/"
+  },
+  {
+    "name": "Services",
+    "path": "/services"
+  },
+  {
+    "name": "CV",
+    "path": "/resume"
+  },
+  {
+    "name": "Travail",
+    "path": "/work"
+  },
+  {
+    "name": "Contact",
+    "path": "/contact"
+  }
+]

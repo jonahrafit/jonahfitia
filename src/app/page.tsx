@@ -8,6 +8,7 @@ import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 
 const Page: React.FC = () => {
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -20,22 +21,32 @@ const Page: React.FC = () => {
               Hello I&rsquo;m <br /> <span className='text-accent'>Jonah Fitia </span>
             </h1>
             <p className='max-w-[500px] mb-9 text-white/80' >I&rsquo;m a FullStack Developer with a strong focus on Java and React. My expertise lies in building scalable backend solutions and crafting seamless user interfaces. I leverage modern frameworks and technologies to deliver robust, high-performing applications </p>
+            <div className="flex flex-col">
+              {/* Bord inférieur */}
+              <div className="border-accent border-4 w-full">
+                {/* Contenu du bord inférieur (si nécessaire) */}
+              </div>
 
-            {/* bouton & socials */}
-            <div className='flex flex-col xl:flex-row items-center gap-8'>
-              <Button variant="outline" size="lg" className='upperace flex items-center gap-2'>
-                <span>Download CV</span>
-                <FiDownload className='text-xl' />
-              </Button>
-              <div className='mb-8 xl:mb-0'>
-                <Social containerStyles='flex gap-6' iconStyles='w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500' />
+              {/* Conteneur pour le bouton */}
+              <div className="flex-grow flex items-end">
+                <div className="flex justify-end w-full p-4">
+                  <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                    <span>Download CV</span>
+                    <FiDownload className="text-xl" />
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
 
           {/* photo */}
-          <div className='order-1 xl:order-none mb-8 xl:mb-0'>
+          <div className='order-1 xl:order-none mb-4 xl:mb-0'>
             <Photo />
+          </div>
+
+          {/* bouton & socials */}
+          <div className='order-1 mb-4 xl:mb-0'>
+            <Social containerStyles='flex flex-col gap-6' iconStyles='w-12 h-12 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500' />
           </div>
         </div>
         <div>
