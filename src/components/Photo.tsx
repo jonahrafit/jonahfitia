@@ -43,7 +43,8 @@ const Photo: React.FC = () => {
                     transition={{
                         duration: 20,
                         repeat: Infinity,
-                        repeatType: "reverse"
+                        repeatType: "reverse",
+                        delay: 1.4, ease: "easeIn"
                     }}
                 />
             </motion.svg>

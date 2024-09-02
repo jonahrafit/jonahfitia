@@ -1,23 +1,86 @@
 [
-    {
-      "num": "01",
-      "title": "Web Developpement",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    },
-    {
-      "num": "02",
-      "title": "Mobile Developpement",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    },
-    {
-      "num": "03",
-      "title": "Design",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    },
-    {
-      "num": "04",
-      "title": "Database Administrator",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus rem, fugit incidunt quia dolor eius sunt, molestiae voluptatum magni labore sequi aperiam excepturi eaque, veniam optio magnam dicta vero!"
-    }
-  ]
-  
+  {
+    "title": "EASY PARK",
+    "subtitle": "Système de gestion de parking",
+    "type": "WEB",
+    "technologies": ["DiCodeigniter", "DiMysql"],
+    "imageShow": ""
+  },
+  {
+    "title": "ECOMMERCE RESTAURANT",
+    "subtitle": "Plateforme e-commerce pour restaurant",
+    "type": "WEB",
+    "technologies": ["DiCodeigniter", "DiMysql"],
+    "imageShow": ""
+  },
+  {
+    "title": "Gestion des vehicules",
+    "subtitle": "Gestion et suivi de véhicules",
+    "type": "WEB",
+    "technologies": ["DiCodeigniter", "DiMysql"],
+    "imageShow": ""
+  },
+  {
+    "title": "Gestion Signalement",
+    "subtitle": "Système de gestion des signalements",
+    "type": "WEB",
+    "technologies": ["FaReact", "DiMysql", "DiMongodb", "FaIonic"],
+    "imageShow": ""
+  },
+  {
+    "title": "ENERGIE RENOUVEABLE",
+    "subtitle": "Système d'énergie renouvelable",
+    "type": "DESKTOP",
+    "technologies": ["SiCsharp"],
+    "imageShow": ""
+  },
+  {
+    "title": "Projet TAXIBE",
+    "subtitle": "Trouver tous les points d'arrêts bus",
+    "type": "DESKTOP",
+    "technologies": ["SiQgis", "DiPostgresql"],
+    "imageShow": ""
+  },
+  {
+    "title": "CovidMada",
+    "subtitle": "Application de suivi du Covid à Madagascar",
+    "type": "DESKTOP",
+    "technologies": ["SiCplusplus"],
+    "imageShow": ""
+  },
+  {
+    "title": "Mini animation Ballon",
+    "subtitle": "Animation de ballon en JavaScript",
+    "type": "WEB",
+    "technologies": ["DiJavascript1"],
+    "imageShow": ""
+  },
+  {
+    "title": "Snake master",
+    "subtitle": "Mini Jeu Snake",
+    "type": "WEB",
+    "technologies": ["DiJavascript1"],
+    "imageShow": "snake_master.png"
+  },
+  {
+    "title": "MADAGASCAR ETAT DYNAMIQUE",
+    "subtitle": "Système dynamique pour Madagascar",
+    "type": "DESKTOP",
+    "technologies": ["DiOracle", "FaJava"],
+    "imageShow": ""
+  },
+  {
+    "title": "Mini-jeu SOCKET",
+    "subtitle": "Jeu client-serveur en Java",
+    "type": "DESKTOP",
+    "technologies": ["FaJava", "FaCodeBranch"],
+    "imageShow": ""
+  },
+  {
+    "title": "GIPA",
+    "subtitle": "Gestion intégré des patients et des actes",
+    "type": "WEB",
+    "technologies": ["FaReact", "FaJava", "DiPostgresql"],
+    "imageShow": ""
+  }
+]

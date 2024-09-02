@@ -21,7 +21,7 @@ const MobileNav: React.FC<NavigationProps> = ({ links }) => {
                 <CiMenuFries className="text-[32px] text-accent"></CiMenuFries>
             </SheetTrigger>
             <SheetContent className="flex flex-col">
-                <div className="mt-32 mb-40 text-center text-2xl">
+                <div className="mt-20 mb-20 text-center text-2xl">
                     <Logo />
                 </div>
                 <div className="flex flex-col justify-center  items-center">

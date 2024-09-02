@@ -29,7 +29,7 @@ const Page: React.FC = () => {
 
               {/* Conteneur pour le bouton */}
               <div className="flex-grow flex items-end">
-                <div className="flex justify-end w-full p-4">
+                <div className="flex xl:justify-end justify-center w-full p-4">
                   <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
                     <span>Download CV</span>
                     <FiDownload className="text-xl" />
@@ -46,7 +46,7 @@ const Page: React.FC = () => {
 
           {/* bouton & socials */}
           <div className='order-1 mb-4 xl:mb-0'>
-            <Social containerStyles='flex flex-col gap-6' iconStyles='w-12 h-12 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500' />
+            <Social containerStyles='flex xl:flex-col flex-row gap-6' iconStyles='w-12 h-12 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500' />
           </div>
         </div>
         <div>

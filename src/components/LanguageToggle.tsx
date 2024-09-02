@@ -12,10 +12,17 @@ const LanguageToggle: React.FC = () => {
                 onClick={toggleLanguage}
                 className="flex items-center space-x-1 p-2"
             >
-                <>
-                    <Image src={`/languages/${language}.png`} alt={`${language} Flag`} width={20} height={20} />
-                    <span>{language}</span>
-                </>
+                {language === 'ENG' ? (
+                    <>
+                        <Image src={`/languages/FR.png`} alt={`Drapeau FR`} width={20} height={20} />
+                        <span>FR</span>
+                    </>
+                ) : (
+                    <>
+                        <Image src={`/languages/ENG.png`} alt={`ENG Flag`} width={20} height={20} />
+                        <span>ENG</span>
+                    </>
+                )}
             </button>
         </div>
     );

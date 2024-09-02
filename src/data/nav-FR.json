@@ -4,19 +4,15 @@
     "path": "/"
   },
   {
-    "name": "Services",
-    "path": "/services"
-  },
-  {
-    "name": "CV",
-    "path": "/resume"
-  },
-  {
-    "name": "Travail",
-    "path": "/work"
+    "name": "Des projets",
+    "path": "/projects"
   },
   {
     "name": "Contact",
     "path": "/contact"
+  },
+  {
+    "name": "A propos ",
+    "path": "/resume"
   }
 ]
