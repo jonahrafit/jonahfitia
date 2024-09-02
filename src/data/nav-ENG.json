@@ -4,19 +4,15 @@
     "path": "/"
   },
   {
-    "name": "services",
-    "path": "/services"
-  },
-  {
-    "name": "Resume",
-    "path": "/resume"
-  },
-  {
-    "name": "work",
-    "path": "/work"
+    "name": "Projects",
+    "path": "/projects"
   },
   {
     "name": "contact",
     "path": "/contact"
+  },
+  {
+    "name": "About me",
+    "path": "/resume"
   }
 ]
