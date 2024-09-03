@@ -10,6 +10,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
+import { ExperienceSection } from "@/interface/ExperienceSection";
+import { EducationSection } from "@/interface/EducationSection";
+
+import experienceDataENG from "@/data/experience-ENG.json";
+import experienceDataFR from "@/data/experience-FR.json";
+import educationDataENG from '@/data/education-ENG.json';
+import educationDataFR from '@/data/education-FR.json';
+import { useLanguage } from '@/context/LanguageContext';
+import Image from "next/image";
 
 const about = {
     title: 'About me',
@@ -42,52 +51,6 @@ const about = {
     ]
 }
 
-const experiences = {
-    icon: '',
-    title: "My experience",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non perspiciatis vero impedit deserunt fugiat velit eaque labore, quos dolore aspernatur nisi cupiditate ipsa ullam culpa excepturi quibusdam aut. Cum, odio?",
-    items: [
-        {
-            company: "FNP Téchnologies",
-            position: "Full Stack Developer",
-            duration: "2022 - Present"
-        },
-        {
-            company: "Eqima Solutions",
-            position: "Web & Mobile Developer",
-            duration: "2021 - 2022"
-        },
-        {
-            company: "Ministry of Public health",
-            position: "Full Stack Developer",
-            duration: "2020 - 2021"
-        }
-    ]
-}
-
-const educations = {
-    icon: '',
-    title: "My education",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non perspiciatis vero impedit deserunt fugiat velit eaque labore, quos dolore aspernatur nisi cupiditate ipsa ullam culpa excepturi quibusdam aut. Cum, odio?",
-    items: [
-        {
-            institute: "IT University",
-            degree: "Master 1",
-            duration: "2023 - Present"
-        },
-        {
-            institute: "IT University",
-            degree: "Bachelor's Software Engineer",
-            duration: "2019 - 2023"
-        },
-        {
-            institute: "Faculty of Medecine",
-            degree: "PACES",
-            duration: "2017 - 2019"
-        }
-    ]
-}
-
 const skills = {
     title: "My skills",
     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non perspiciatis vero impedit deserunt fugiat velit eaque labore, quos dolore aspernatur nisi cupiditate ipsa ullam culpa excepturi quibusdam aut. Cum, odio?",
@@ -117,7 +80,56 @@ const skills = {
     ]
 }
 
+const tabs = [
+    {
+        "tab_link": "experience",
+        "FR": "Experiences professionnelles",
+        "ENG": "Professionnal Experience"
+    },
+    {
+        "tab_link": "education",
+        "FR": "Parcours scolaire",
+        "ENG": "Schoole career"
+    },
+    {
+        "tab_link": "skills",
+        "FR": "Mes compétences",
+        "ENG": "Skills"
+    },
+    {
+        "tab_link": "about",
+        "FR": "A propos de moi",
+        "ENG": "About me"
+    },
+]
+
+const convertDate = (dateStr: string | null, lang: 'ENG' | 'FR'): string => {
+    if (dateStr === null) {
+        if (lang === 'ENG') {
+            return 'Now'
+        }
+        else {
+            return "aujourd'hui"
+        }
+    }
+
+    const [year, month] = dateStr.split('-');
+
+    const months: Record<string, string[]> = {
+        ENG: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        FR: ['Janv', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc']
+    };
+
+    const monthName = months[lang][parseInt(month) - 1];
+    return `${monthName} ${year}`;
+};
+
+
 const Resume = () => {
+    const { language } = useLanguage();
+    const experiences: ExperienceSection = language === 'FR' ? (experienceDataFR as ExperienceSection) : (experienceDataENG as ExperienceSection);
+    const educations: EducationSection = language === 'FR' ? (educationDataFR as EducationSection) : (educationDataENG as EducationSection);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -134,12 +146,11 @@ const Resume = () => {
             <div className="container mx-auto">
                 <Tabs
                     defaultValue="experience"
-                    className="flex flex-col xl:flex-row gap-[60px]">
+                    className="flex flex-col xl:flex-row gap-[30px]">
                     <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-                        <TabsTrigger value={"experience"}>Experience</TabsTrigger>
-                        <TabsTrigger value={"education"}>Education</TabsTrigger>
-                        <TabsTrigger value={"skills"}>Skills</TabsTrigger>
-                        <TabsTrigger value={"about"}>About me</TabsTrigger>
+                        {tabs.map((item, index) => (
+                            <TabsTrigger value={item.tab_link} key={index}>{language === "ENG" ? item.ENG : item.FR}</TabsTrigger>
+                        ))}
                     </TabsList>
 
                     <div className="min-h-[70vh] w-full">
@@ -147,18 +158,43 @@ const Resume = () => {
                         {/* experience */}
                         <TabsContent value="experience" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">{experiences.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experiences.description}</p>
-                                <ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[38px]">
+                                <div className="flex items-center gap-3">
+                                    <Image src={'/logo_exp' + experiences.icon}
+                                        priority
+                                        quality={100}
+                                        width={50}
+                                        height={50}
+                                        alt=""
+                                        className='object-contain'
+                                    ></Image>
+                                    <h3 className="text-4xl font-bold">{experiences.title}</h3>
+                                </div>
+                                <ScrollArea className="h-[400px] xl:h-[600px]">
+                                    <ul className="grid grid-cols-1 gap-[15px]">
                                         {experiences.items.map((item, index) => {
                                             return (
-                                                <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                                                    <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                                                <li key={index} className="bg-[#232329] h-auto py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                                                    <span className="text-accent">{convertDate(item.startDate, language) + ' - ' + convertDate(item.endDate, language)}</span>
+                                                    <h3 className="text-xl max-w-[260px] text-center lg:text-left">{item.position}</h3>
                                                     <div className="flex items-center gap-3">
-                                                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                        <p className="text-white/60">{item.company}</p>
+                                                        <Image src={'/logo_exp' + item.icon}
+                                                            priority
+                                                            quality={100}
+                                                            width={50}
+                                                            height={50}
+                                                            alt=""
+                                                            className='object-contain'
+                                                        ></Image>
+                                                        <p className="text-white">{item.company},</p>
+                                                        <p className="text-white/60">{item.adress}</p>
+                                                    </div>
+                                                    <div className="gap-3">
+                                                        {item.description.map((item, index) => (
+                                                            <div className="flex items-center gap-3" key={index}>
+                                                                <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                                                                <p className="text-white/60">{item}</p>
+                                                            </div>
+                                                        ))}
                                                     </div>
                                                 </li>
                                             )
@@ -168,22 +204,45 @@ const Resume = () => {
                             </div>
                         </TabsContent>
 
-
                         {/* education */}
                         <TabsContent value="education" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">{educations.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{educations.description}</p>
-                                <ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[38px]">
+                                <div className="flex items-center gap-3">
+                                    <Image src={'/logo_education' + educations.icon}
+                                        priority
+                                        quality={100}
+                                        width={50}
+                                        height={50}
+                                        alt=""
+                                        className='object-contain'
+                                    ></Image>
+                                    <h3 className="text-4xl font-bold">{educations.title}</h3>
+                                </div><ScrollArea className="h-[400px]">
+                                    <ul className="grid grid-cols-1 gap-[38px]">
                                         {educations.items.map((item, index) => {
                                             return (
                                                 <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                                                    <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                                                    <span className="text-accent">{convertDate(item.startDate, language) + ' - ' + convertDate(item.endDate, language)}</span>
+                                                    <h3 className="text-xl text-center lg:text-left">{item.degree}</h3>
                                                     <div className="flex items-center gap-3">
-                                                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                        <p className="text-white/60">{item.institute}</p>
+                                                        <Image src={'/logo_education' + item.icon}
+                                                            priority
+                                                            quality={100}
+                                                            width={50}
+                                                            height={50}
+                                                            alt=""
+                                                            className='object-contain'
+                                                        ></Image>
+                                                        <p className="text-white">{item.institute},</p>
+                                                        <p className="text-white/60">{item.adress}</p>
+                                                    </div>
+                                                    <div className="gap-3">
+                                                        {item.description.map((item, index) => (
+                                                            <div className="flex items-center gap-3" key={index}>
+                                                                <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                                                                <p className="text-white/60">{item}</p>
+                                                            </div>
+                                                        ))}
                                                     </div>
                                                 </li>
                                             )
