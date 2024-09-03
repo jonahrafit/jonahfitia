@@ -1,0 +1,60 @@
+{
+  "icon": "/mallette.png",
+  "title": "Professional Experience",
+  "items": [
+    {
+      "icon": "/fnp.png",
+      "company": "FNP Technologies",
+      "position": "Full Stack Developer",
+      "description": [
+        "Developed and maintained web applications using Spring Boot and Quarkus.",
+        "Utilized Java, Javascript, JQuery, Spring boot and HTML/CSS for backend and frontend development",
+        "Managed version control with Github",
+        "Worked with MySQL for database management."
+      ],
+      "startDate": "2024-03",
+      "endDate": null,
+      "adress": "Antananarivo, Madagascar"
+    },
+    {
+      "icon": "/fnp.png",
+      "company": "FNP Technologies",
+      "position": "Front-end Developer",
+      "description": [
+        "Development of new interface based on Figma design",
+        "Debugging and improving existing functionality",
+        "Continuous integration with github"
+      ],
+      "startDate": "2024-02",
+      "endDate": "2024-03",
+      "adress": "Antananarivo, Madagascar"
+    },
+    {
+      "icon": "/eqima.png",
+      "company": "Eqima Solutions",
+      "position": "Web & Mobile Developer",
+      "description": [
+        "Developed mobile applications using Android Studio and Java.",
+        "Built web applications with React.",
+        "Integrated Firebase for backend services.",
+        "Used Github for version control."
+      ],
+      "startDate": "2023-12",
+      "endDate": "2024-01",
+      "adress": "Antananarivo, Madagascar"
+    },
+    {
+      "icon": "/minsanp.png",
+      "company": "Ministry of Public Health",
+      "position": "Full Stack Developer",
+      "description": [
+        "Developed web applications for patient management using Spring Boot and React JS.",
+        "Managed PostgreSQL databases.",
+        "Collaborated in a team environment to enhance public health services"
+      ],
+      "startDate": "2022-11",
+      "endDate": "2023-04",
+      "adress": "Antananarivo, Madagascar"
+    }
+  ]
+}

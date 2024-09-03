@@ -1,0 +1,24 @@
+{
+  "icon": "/education.png",
+  "title": "Mon parcours scolaire",
+  "items": [
+    {
+      "icon": "/itu.jpeg",
+      "institute": "IT University",
+      "degree": "Master 1",
+      "adress": "Andoharanofotsy Antananarivo, Madagascar",
+      "startDate": "2023-12",
+      "endDate": null,
+      "description": []
+    },
+    {
+      "icon": "/itu.jpeg",
+      "institute": "IT University",
+      "degree": "Licence en Développement d'application",
+      "adress": "Andoharanofotsy Antananarivo, Madagascar",
+      "startDate": "2019-11",
+      "endDate": "2023-10",
+      "description": []
+    }
+  ]
+}

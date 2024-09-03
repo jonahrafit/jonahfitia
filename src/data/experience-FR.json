@@ -1,0 +1,60 @@
+{
+  "icon": "/mallette.png",
+  "title": "Expérience Professionnelle",
+  "items": [
+    {
+      "icon": "/fnp.png",
+      "company": "FNP Technologies",
+      "position": "Développeur Full Stack",
+      "description": [
+        "Développement et maintenance d'applications web en utilisant Spring Boot et Quarkus.",
+        "Utilisation de Java, Javascript, JQuery, Spring Boot et HTML/CSS pour le développement backend et frontend.",
+        "Gestion du contrôle de version avec Github.",
+        "Gestion de bases de données avec MySQL."
+      ],
+      "startDate": "2024-03",
+      "endDate": null,
+      "adress": "Antananarivo, Madagascar"
+    },
+    {
+      "icon": "/fnp.png",
+      "company": "FNP Technologies",
+      "position": "Développeur Front-end",
+      "description": [
+        "Développement d'une nouvelle interface basée sur un design Figma.",
+        "Débogage et amélioration des fonctionnalités existantes.",
+        "Intégration continue avec Github."
+      ],
+      "startDate": "2024-02",
+      "endDate": "2024-03",
+      "adress": "Antananarivo, Madagascar"
+    },
+    {
+      "icon": "/eqima.png",
+      "company": "Eqima Solutions",
+      "position": "Développeur Web & Mobile",
+      "description": [
+        "Développement d'applications mobiles en utilisant Android Studio et Java.",
+        "Création d'applications web avec React.",
+        "Intégration de Firebase pour les services backend.",
+        "Utilisation de Github pour le contrôle de version."
+      ],
+      "startDate": "2023-12",
+      "endDate": "2024-01",
+      "adress": "Antananarivo, Madagascar"
+    },
+    {
+      "icon": "/minsanp.png",
+      "company": "Ministère de la Santé Publique",
+      "position": "Développeur Full Stack",
+      "description": [
+        "Développement d'applications web pour la gestion des patients en utilisant Spring Boot et React JS.",
+        "Gestion des bases de données PostgreSQL.",
+        "Collaboration en équipe pour améliorer les services de santé publique."
+      ],
+      "startDate": "2022-11",
+      "endDate": "2023-04",
+      "adress": "Antananarivo, Madagascar"
+    }
+  ]
+}
