@@ -14,6 +14,7 @@ import { ExperienceSection } from "@/interface/ExperienceSection";
 import { EducationSection } from "@/interface/EducationSection";
 import { SkillSection } from "@/interface/SkillSection";
 import { AboutSection } from "@/interface/AboutSection";
+import { SkillItem } from "@/interface/SkillItem";
 
 import experienceDataENG from "@/data/experience-ENG.json";
 import experienceDataFR from "@/data/experience-FR.json";
@@ -48,7 +49,31 @@ const tabs = [
         "FR": "A propos de moi",
         "ENG": "About me"
     },
-]
+];
+
+const tabs_skill = [
+    {
+        "tab_skills_link": "languages",
+        "FR": "Langage de programmation",
+        "ENG": "Programming languages"
+    }, {
+        "tab_skills_link": "framework",
+        "FR": "Framework",
+        "ENG": "Framework"
+    }, {
+        "tab_skills_link": "database",
+        "FR": "Base de donnée",
+        "ENG": "Database"
+    }, {
+        "tab_skills_link": "tools",
+        "FR": "Outils",
+        "ENG": "Tools"
+    }, {
+        "tab_skills_link": "other",
+        "FR": "Autres",
+        "ENG": "Other"
+    }
+];
 
 const convertDate = (dateStr: string | null, lang: 'ENG' | 'FR'): string => {
     if (dateStr === null) {
@@ -76,7 +101,7 @@ const Resume = () => {
     const { language } = useLanguage();
     const experiences: ExperienceSection = language === 'FR' ? (experienceDataFR as ExperienceSection) : (experienceDataENG as ExperienceSection);
     const educations: EducationSection = language === 'FR' ? (educationDataFR as EducationSection) : (educationDataENG as EducationSection);
-    const skills: SkillSection = language === 'FR' ? (skillDataFR as SkillSection) : (skillDataENG as SkillSection);
+    const skills: SkillSection = language === 'FR' ? (skillDataFR as SkillSection) : (skillDataFR as SkillSection);
     const about: AboutSection = language === 'FR' ? (aboutDataFR as AboutSection) : (aboutDataENG as AboutSection);
 
     return (
@@ -203,37 +228,47 @@ const Resume = () => {
 
                         {/* skills */}
                         <TabsContent value="skills" className="w-full h-full">
-                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <div className="flex flex-col gap-[30px]  text-center xl:text-left">
+                            <div className="flex flex-col gap-[10px] text-center xl:text-left">
+                                <div className="flex flex-col gap-[10px]  text-center xl:text-left">
                                     <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                    <p className="max-w-[600px] text-while/60 mx-auto xl:mx-0">{skills.description}</p>
+                                    <p className="text-while/60 mx-auto xl:mx-0">{skills.description}</p>
                                 </div>
-                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                                    {skills.skillList.map((skill, index) => {
-                                        return <li key={index}>
-                                            <TooltipProvider delayDuration={100}>
-                                                <Tooltip>
-                                                    <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                                        <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                                            {iconMap[skill.icon]}
-                                                        </div>
-                                                    </TooltipTrigger>
-                                                    <TooltipContent>
-                                                        <p className="capitalize">{skill.name}</p>
-                                                    </TooltipContent>
-                                                </Tooltip>
-                                            </TooltipProvider>
-                                        </li>
-                                    })}
-                                </ul>
+                                <div className="border-accent border-2 w-full"></div>
+                                {tabs_skill.map((item, index) => {
+                                    const skillList: SkillItem[] = skills[item.tab_skills_link] || [];
+                                    return (
+                                        <div key={index}>
+                                            <span className='text-xl p-0 m-0' >{language === "ENG" ? item.ENG : item.FR}</span>
+                                            <ul className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-8 gap-4 xl:gap-[10px]">
+                                                {skillList.map((skill, index) => {
+                                                    return <li key={index}>
+                                                        <TooltipProvider delayDuration={100}>
+                                                            <Tooltip>
+                                                                <TooltipTrigger className="w-full auto h-[60px] bg-[#ffffff] rounded-xl flex justify-center items-center group">
+                                                                    <div className="text-3xl text-primary group-hover:text-accent transition-all duration-300">
+                                                                        {iconMap[skill.icon]}
+                                                                    </div>
+                                                                </TooltipTrigger>
+                                                                <TooltipContent>
+                                                                    <p className="capitalize">{skill.name}</p>
+                                                                </TooltipContent>
+                                                            </Tooltip>
+                                                        </TooltipProvider>
+                                                    </li>
+                                                })}
+                                            </ul>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </TabsContent>
 
                         {/* about */}
                         <TabsContent value="about" className="w-full tex-center xl:text-left">
-                            <div className="flex flex-col gap-[30px]">
+                            <div className="flex flex-col gap-[10px]">
                                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                                <p className=" text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                                <div className="border-accent border-2 w-full"></div>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6max-w-[620px] mx-auto xl:mx-0">
                                     {about.info.map((item, index) => {
                                         return (
@@ -244,6 +279,7 @@ const Resume = () => {
                                         )
                                     })}
                                 </ul>
+                                <div className="border-accent border-2 w-full"></div>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6max-w-[620px] mx-auto xl:mx-0">
                                     {about.language.map((item, index) => {
                                         return (

@@ -1,11 +1,12 @@
-interface SkillItem {
-    icon: string;
-    name: string;
-}
+import { SkillItem } from "./SkillItem";
 
 export interface SkillSection {
     icon: string;
     title: string;
     description: string;
-    skillList: SkillItem[];
+    languages: SkillItem[];
+    framework: SkillItem[];
+    database: SkillItem[];
+    tools: SkillItem[];
+    other: SkillItem[];
 }
