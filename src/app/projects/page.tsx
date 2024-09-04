@@ -4,14 +4,15 @@ import React, { useState } from "react";
 import { BsArrowDownRight, BsArrowUpRight } from 'react-icons/bs';
 import Link from "next/link";
 import { motion } from "framer-motion";
-import servicesData from "@/data/services.json";
+import projectData from "@/data/projects.json";
 import { Input } from "@/components/ui/input";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip";
 import Image from "next/image";
-import { FaReact, FaJava, FaMobileAlt, FaCodeBranch, FaDatabase } from 'react-icons/fa';
-import { DiCodeigniter, DiMysql, DiMongodb, DiPostgresql, DiJavascript1 } from 'react-icons/di';
-import { SiCsharp, SiQgis, SiCplusplus } from 'react-icons/si';
 import iconMap from '@/context/iconMap';
+import { GoVideo } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
+import { ProjectItem } from "@/interface/ProjectItem";
 
 interface FilterButtonProps {
     text: string;
@@ -32,15 +33,7 @@ const FilterButton = ({ text, isActive, onClick }: FilterButtonProps) => {
     );
 };
 
-// Définition du type pour un service
-interface Service {
-    title: string;
-    subtitle: string;
-    type: string,
-    technologies: string[];
-    imageShow: string
-}
-const Services = () => {
+const Projects = () => {
 
     const [activeFilter, setActiveFilter] = useState('ALL');
 
@@ -49,14 +42,14 @@ const Services = () => {
     };
 
     // Fonction pour filtrer les services
-    const filterServices = (services: Service[]) => {
+    const filterServices = (services: ProjectItem[]) => {
         if (activeFilter === 'ALL') {
             return services;
         }
         return services.filter(service => service.type === activeFilter);
     };
 
-    const services: Service[] = servicesData;
+    const services: ProjectItem[] = projectData as ProjectItem[];
     const filteredServices = filterServices(services);
 
     return (
@@ -129,16 +122,36 @@ const Services = () => {
                                     <div>
                                         {/* Bottom Left Title and Subtitle */}
                                         <div className="relative text-white z-20">
-                                            <Link href={"/projects/3"}>
+                                            <Link target="_blank" href={"/projects/3"}>
                                                 <h2 className="text-[25px] font-bold leading-none group-hover:text-accent transition-all duration-500">
                                                     {item.title}
                                                 </h2>
                                             </Link>
                                             <p className="text-sm group-hover:text-accent py-2">{item.subtitle}</p>
-                                            <div className="flex items-center space-x-2 text-2xl group-hover:text-accent">
-                                                {item.technologies.map((tech, index) => iconMap[tech] || (
-                                                    <span key={index}>{tech}</span>
-                                                ))}
+                                            <div className="container w-full flex justify-between">
+                                                <div className="flex items-center space-x-2 text-2xl group-hover:text-accent">
+                                                    {item.technologies.map((tech, index) => iconMap[tech] || (
+                                                        <span key={index}>{tech}</span>
+                                                    ))}
+                                                </div>
+                                                <div className="flex items-center space-x-2 text-2xl group-hover:text-accent">
+                                                    {item.video !== "" &&
+                                                        <Link target="_blank" href={item.video} title="Video">
+                                                            <GoVideo className="hover:scale-150 transition-transform duration-300" />
+                                                        </Link>
+                                                    }
+                                                    {item.github !== "" &&
+                                                        <Link target="_blank" href={item.github} title="Github">
+                                                            <FaGithub className="hover:scale-150 transition-transform duration-300" />
+                                                        </Link>
+                                                    }
+                                                    {item.live !== "" &&
+                                                        <Link target="_blank" href={item.live} title="Live">
+                                                            <TbWorld className="hover:scale-150 transition-transform duration-300" />
+                                                        </Link>
+                                                    }
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -152,4 +165,4 @@ const Services = () => {
     )
 }
 
-export default Services;
+export default Projects;
