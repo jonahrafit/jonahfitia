@@ -11,23 +11,7 @@ import Image from "next/image";
 import { FaReact, FaJava, FaMobileAlt, FaCodeBranch, FaDatabase } from 'react-icons/fa';
 import { DiCodeigniter, DiMysql, DiMongodb, DiPostgresql, DiJavascript1 } from 'react-icons/di';
 import { SiCsharp, SiQgis, SiCplusplus } from 'react-icons/si';
-
-// Mapper les noms des icônes vers les composants réels
-const iconMap: { [key: string]: JSX.Element } = {
-    FaReact: <FaReact />,
-    FaIonic: <FaMobileAlt />,
-    FaJava: <FaJava />,
-    FaCodeBranch: <FaCodeBranch />,
-    DiCodeigniter: <DiCodeigniter />,
-    DiMysql: <DiMysql />,
-    DiMongodb: <DiMongodb />,
-    DiPostgresql: <DiPostgresql />,
-    DiJavascript1: <DiJavascript1 />,
-    DiOracle: <FaDatabase />,
-    SiCsharp: <SiCsharp />,
-    SiQgis: <SiQgis />,
-    SiCplusplus: <SiCplusplus />
-};
+import iconMap from '@/context/iconMap';
 
 interface FilterButtonProps {
     text: string;

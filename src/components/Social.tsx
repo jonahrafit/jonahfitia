@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaFacebook, FaVoicemail, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaFacebook, FaVoicemail, FaEnvelope } from "react-icons/fa";
 
 interface SocialProps {
     containerStyles: string;
@@ -10,7 +10,7 @@ interface SocialProps {
 const socials = [
     { icon: <FaGithub />, path: 'https://www.github.com/jonahrafit/' },
     { icon: <FaLinkedin />, path: 'https://www.linkedin.com/in/ramanantsafidy' },
-    { icon: <FaFacebook />, path: 'https://www.facebook.com/jonah.rafit/' }
+    { icon: <FaFacebook />, path: 'https://www.facebook.com/jonah.rafit/' },
 ];
 
 const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {

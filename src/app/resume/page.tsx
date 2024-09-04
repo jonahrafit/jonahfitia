@@ -12,73 +12,20 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from 'framer-motion';
 import { ExperienceSection } from "@/interface/ExperienceSection";
 import { EducationSection } from "@/interface/EducationSection";
+import { SkillSection } from "@/interface/SkillSection";
+import { AboutSection } from "@/interface/AboutSection";
 
 import experienceDataENG from "@/data/experience-ENG.json";
 import experienceDataFR from "@/data/experience-FR.json";
 import educationDataENG from '@/data/education-ENG.json';
 import educationDataFR from '@/data/education-FR.json';
+import skillDataENG from '@/data/skill-ENG.json';
+import skillDataFR from '@/data/skill-FR.json';
+import aboutDataENG from '@/data/about-ENG.json';
+import aboutDataFR from '@/data/about-FR.json';
 import { useLanguage } from '@/context/LanguageContext';
 import Image from "next/image";
-
-const about = {
-    title: 'About me',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolorem delectus cum blanditiis consequatur corporis ad fuga, sapiente ipsa officiis totam quia tempora, at qui dolor. Illo iusto exercitationem nihil!",
-    info: [
-        {
-            fieldName: "Name",
-            fieldValue: "Jonah Fitia"
-        },
-        {
-            fieldName: "Phone",
-            fieldValue: "(+261) 34 64 205 06"
-        },
-        {
-            fieldName: "Experience",
-            fieldValue: "2+ Years"
-        },
-        {
-            fieldName: "Email",
-            fieldValue: "jonahrafit.ram@hotmail.com"
-        },
-        {
-            fieldName: "Freelance",
-            fieldValue: "Available"
-        },
-        {
-            fieldName: "Languages",
-            fieldValue: "French , English"
-        },
-    ]
-}
-
-const skills = {
-    title: "My skills",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non perspiciatis vero impedit deserunt fugiat velit eaque labore, quos dolore aspernatur nisi cupiditate ipsa ullam culpa excepturi quibusdam aut. Cum, odio?",
-    skillList: [
-        {
-            icon: <FaHtml5 />,
-            name: "HTML5"
-        }, {
-            icon: <FaCss3 />,
-            name: "Css3"
-        }, {
-            icon: <FaReact />,
-            name: "React"
-        }, {
-            icon: <FaJs />,
-            name: "Javascript"
-        }, {
-            icon: <FaJava />,
-            name: "Java"
-        }, {
-            icon: <SiTailwindcss />,
-            name: "Tailwind.css"
-        }, {
-            icon: <FaNodeJs />,
-            name: "Node JS"
-        },
-    ]
-}
+import iconMap from "@/context/iconMap";
 
 const tabs = [
     {
@@ -129,6 +76,8 @@ const Resume = () => {
     const { language } = useLanguage();
     const experiences: ExperienceSection = language === 'FR' ? (experienceDataFR as ExperienceSection) : (experienceDataENG as ExperienceSection);
     const educations: EducationSection = language === 'FR' ? (educationDataFR as EducationSection) : (educationDataENG as EducationSection);
+    const skills: SkillSection = language === 'FR' ? (skillDataFR as SkillSection) : (skillDataENG as SkillSection);
+    const about: AboutSection = language === 'FR' ? (aboutDataFR as AboutSection) : (aboutDataENG as AboutSection);
 
     return (
         <motion.div
@@ -218,7 +167,7 @@ const Resume = () => {
                                     ></Image>
                                     <h3 className="text-4xl font-bold">{educations.title}</h3>
                                 </div><ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 gap-[38px]">
+                                    <ul className="grid grid-cols-1 gap-[20px]">
                                         {educations.items.map((item, index) => {
                                             return (
                                                 <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
@@ -266,7 +215,7 @@ const Resume = () => {
                                                 <Tooltip>
                                                     <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
                                                         <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                                            {skill.icon}
+                                                            {iconMap[skill.icon]}
                                                         </div>
                                                     </TooltipTrigger>
                                                     <TooltipContent>
@@ -291,6 +240,16 @@ const Resume = () => {
                                             <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
                                                 <span className="text-white/60">{item.fieldName}</span>
                                                 <span className="text-xl">{item.fieldValue}</span>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6max-w-[620px] mx-auto xl:mx-0">
+                                    {about.language.map((item, index) => {
+                                        return (
+                                            <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                                                <span className="text-white/60">{item.name}</span>
+                                                <span className="text-xl">{item.measure}</span>
                                             </li>
                                         )
                                     })}

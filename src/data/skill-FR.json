@@ -1,0 +1,42 @@
+{
+  "title": "Mes Compétences",
+  "description": "Voici un aperçu des technologies et langages que j'utilise régulièrement pour concevoir et implémenter des solutions efficaces.",
+  "skillList": [
+    {
+      "icon": "FaJava",
+      "name": "Java"
+    },
+    {
+      "icon": "FaReact",
+      "name": "React.js"
+    },
+    {
+      "icon": "DiPostgresql",
+      "name": "PostgreSQL"
+    },
+    {
+      "icon": "FaHtml5",
+      "name": "HTML5"
+    },
+    {
+      "icon": "FaCss3",
+      "name": "CSS3"
+    },
+    {
+      "icon": "FaJs",
+      "name": "JavaScript"
+    },
+    {
+      "icon": "FaNodeJs",
+      "name": "Node.js"
+    },
+    {
+      "icon": "DiMysql",
+      "name": "MySQL"
+    },
+    {
+      "icon": "FaPhp",
+      "name": "PHP"
+    }
+  ]
+}

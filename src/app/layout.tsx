@@ -15,13 +15,11 @@ const jetBrains_Mono = JetBrains_Mono({
 
 export default function RootLayout({
   children,
-  params: { locale }, // Ajout des paramètres pour récupérer la langue
 }: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string }; // Ajout de locale ici
+  children: React.ReactNode;// Ajout de locale ici
 }>) {
   return (
-    <html lang={locale}> {/* Langue dynamique */}
+    <html lang="en">
       <body className={jetBrains_Mono.className}>
         <LanguageProvider>
           <Header />
