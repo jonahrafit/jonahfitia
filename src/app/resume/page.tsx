@@ -74,7 +74,6 @@ const tabs_skill = [
         "ENG": "Other"
     }
 ];
-
 const convertDate = (dateStr: string | null, lang: 'ENG' | 'FR'): string => {
     if (dateStr === null) {
         if (lang === 'ENG') {
@@ -235,7 +234,7 @@ const Resume = () => {
                                 </div>
                                 <div className="border-accent border-2 w-full"></div>
                                 {tabs_skill.map((item, index) => {
-                                    const skillList: SkillItem[] = skills[item.tab_skills_link] || [];
+                                    const skillList = (skills[item.tab_skills_link as keyof SkillSection] || []) as SkillItem[];
                                     return (
                                         <div key={index}>
                                             <span className='text-xl p-0 m-0' >{language === "ENG" ? item.ENG : item.FR}</span>
