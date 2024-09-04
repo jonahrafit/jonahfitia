@@ -1,0 +1,36 @@
+{
+  "title": "About Me",
+  "description": "Passionate about web development and modern technologies, I have solid experience in creating robust and high-performance applications. My goal is to design innovative solutions that meet users' needs.",
+  "info": [
+    {
+      "fieldName": "Last Name",
+      "fieldValue": "RAMANANTSAFIDY"
+    },
+    {
+      "fieldName": "First Name",
+      "fieldValue": "Mariella Jonah Fitia"
+    },
+    {
+      "fieldName": "Phone",
+      "fieldValue": "(+261) 34 64 205 06"
+    },
+    {
+      "fieldName": "Email",
+      "fieldValue": "jonahrafit.ram@hotmail.com"
+    },
+    {
+      "fieldName": "Freelance",
+      "fieldValue": "Available"
+    }
+  ],
+  "language": [
+    {
+      "name": "French",
+      "measure": "Read, Speak, and Write"
+    },
+    {
+      "name": "English",
+      "measure": "Read and Write"
+    }
+  ]
+}
