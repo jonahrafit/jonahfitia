@@ -1,12 +1,18 @@
 [
   {
-    "title": "EASY PARK",
+    "id": 1,
+    "title": "PARKEO",
     "subtitle": "Système de gestion de parking",
     "type": "WEB",
     "technologies": ["DiCodeigniter", "DiMysql"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://github.com/jonahrafit/easy.park"
+      }
+    ],
     "live": "",
     "video": "",
     "description": "",
@@ -15,28 +21,40 @@
     "role": []
   },
   {
-    "title": "ECOMMERCE RESTAURANT",
-    "subtitle": "Plateforme e-commerce pour restaurant",
-    "type": "WEB",
-    "technologies": ["DiCodeigniter", "DiMysql"],
+    "id": 2,
+    "title": "Mada Tour",
+    "subtitle": "Application mobile des sites touristiques de Madagascar",
+    "type": "MOBILE",
+    "technologies": ["SiAndroidstudio", "SiMongodb"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://github.com/jonahrafit/"
+      }
+    ],
     "live": "",
-    "video": "deed",
+    "video": "",
     "description": "",
     "fonctionnality": [],
     "challenges_met": [],
     "role": []
   },
   {
-    "title": "Gestion des vehicules",
+    "id": 3,
+    "title": "VEHICULO",
     "subtitle": "Gestion et suivi de véhicules",
     "type": "WEB",
     "technologies": ["DiCodeigniter", "DiMysql"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
     "live": "li",
     "video": "",
     "description": "",
@@ -45,13 +63,40 @@
     "role": []
   },
   {
+    "id": 4,
+    "title": "Référencement SEO",
+    "subtitle": "Réferencement et Optimisation Site web",
+    "type": "OTHER",
+    "technologies": [],
+    "imageShow": "",
+    "image": [],
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
+    "live": "li",
+    "video": "",
+    "description": "",
+    "fonctionnality": [],
+    "challenges_met": [],
+    "role": []
+  },
+  {
+    "id": 5,
     "title": "Gestion Signalement",
     "subtitle": "Système de gestion des signalements",
     "type": "WEB",
     "technologies": ["FaReact", "DiMysql", "DiMongodb", "SiIonic"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
     "live": "",
     "video": "",
     "description": "",
@@ -60,13 +105,60 @@
     "role": []
   },
   {
-    "title": "ENERGIE RENOUVEABLE",
+    "id": 6,
+    "title": "GASY MANJA",
+    "subtitle": "Application web d'un salon de beauté",
+    "type": "WEB",
+    "technologies": ["DiMongodb", "SiExpress", "FaAngular", "FaNodeJs"],
+    "imageShow": "/gasy_manja/image12.png",
+    "image": [
+      "/gasy_manja/image1.png",
+      "/gasy_manja/image3.png",
+      "/gasy_manja/image6.png",
+      "/gasy_manja/image7.png",
+      "/gasy_manja/image8.png",
+      "/gasy_manja/image9.png",
+      "/gasy_manja/image10.png",
+      "/gasy_manja/image11.png",
+      "/gasy_manja/image12.png"
+    ],
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://github.com/jonahrafit/m1p10mean-front-Lucien-Jonah.git"
+      },
+      {
+        "name": "Back",
+        "value": "https://github.com/jonahrafit/m1p10mean-back-Jonah-Lucien.git"
+      }
+    ],
+    "live": "",
+    "video": "",
+    "description": "Dans le contexte actuel où la digitalisation joue un rôle prépondérant dans la gestion des services et des entreprises, la mise en place d'une application web devient une nécessité pour de nombreux secteurs d'activité. Dans ce cadre, notre équipe s'est vu confier la mission de concevoir et de développer une application web pour un salon de beauté souhaitant moderniser ses services et offrir une expérience utilisateur optimale à sa clientèle. L'objectif principal de cette application est de simplifier et d'optimiser la gestion des rendez-vous, des services, du personnel et des données financières, tout en offrant une interface conviviale et intuitive pour les utilisateurs.",
+    "fonctionnality": [
+      "Authentification/ Inscription avec confirmation par mail",
+      "Visualisation des listes de services",
+      "Prise de rendez-vous",
+      "Chaque rôle dispose son interface (Admin , Amployee)",
+      "Dashboard pour les statistiques"
+    ],
+    "challenges_met": [],
+    "role": []
+  },
+  {
+    "id": 7,
+    "title": "Energie renouvelable",
     "subtitle": "Système d'énergie renouvelable",
     "type": "DESKTOP",
     "technologies": ["SiCsharp"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
     "live": "",
     "video": "",
     "description": "",
@@ -75,13 +167,14 @@
     "role": []
   },
   {
+    "id": 8,
     "title": "Projet TAXIBE",
     "subtitle": "Trouver tous les points d'arrêts bus",
     "type": "DESKTOP",
     "technologies": ["SiQgis", "DiPostgresql"],
     "imageShow": "",
     "image": [],
-    "github": "",
+    "github": [],
     "live": "deded",
     "video": "dee",
     "description": "",
@@ -90,13 +183,19 @@
     "role": []
   },
   {
+    "id": 9,
     "title": "CovidMada",
     "subtitle": "Application de suivi du Covid à Madagascar",
     "type": "DESKTOP",
     "technologies": ["SiCplusplus"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
     "live": "",
     "video": "",
     "description": "",
@@ -105,43 +204,19 @@
     "role": []
   },
   {
-    "title": "Mini animation Ballon",
-    "subtitle": "Animation de ballon en JavaScript",
-    "type": "WEB",
-    "technologies": ["DiJavascript1"],
-    "imageShow": "",
-    "image": [],
-    "github": "https://www.github.com/jonahrafit",
-    "live": "",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
-    "title": "Snake master",
-    "subtitle": "Mini Jeu Snake",
-    "type": "WEB",
-    "technologies": ["DiJavascript1"],
-    "imageShow": "snake_master.png",
-    "image": [],
-    "github": "https://www.github.com/jonahrafit",
-    "live": "",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
-    "title": "MADAGASCAR ETAT DYNAMIQUE",
+    "id": 10,
+    "title": "Etat dynamique Mada",
     "subtitle": "Système dynamique pour Madagascar",
     "type": "DESKTOP",
     "technologies": ["SiOracle", "FaJava"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
     "live": "",
     "video": "",
     "description": "",
@@ -150,13 +225,19 @@
     "role": []
   },
   {
+    "id": 11,
     "title": "Mini-jeu SOCKET",
     "subtitle": "Jeu client-serveur en Java",
     "type": "DESKTOP",
     "technologies": ["FaJava"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
     "live": "",
     "video": "",
     "description": "",
@@ -165,13 +246,50 @@
     "role": []
   },
   {
+    "id": 12,
     "title": "GIPA",
     "subtitle": "Gestion intégré des patients et des actes",
     "type": "WEB",
     "technologies": ["FaReact", "FaJava", "DiPostgresql"],
     "imageShow": "",
     "image": [],
-    "github": "https://www.github.com/jonahrafit",
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
+    "live": "",
+    "video": "",
+    "description": "",
+    "fonctionnality": [],
+    "challenges_met": [],
+    "role": []
+  },
+
+  {
+    "id": 13,
+    "title": "MAXI CONCOURS",
+    "subtitle": "Application de manipulation de l'argent en ligne",
+    "type": "WEB",
+    "technologies": ["FaReact", "FaNodeJs", "DiMysql"],
+    "imageShow": "/maxi_concours/image6.png",
+    "image": [
+      "/maxi_concours/image1.png",
+      "/maxi_concours/image2.png",
+      "/maxi_concours/image3.png",
+      "/maxi_concours/image4.png",
+      "/maxi_concours/image5.png",
+      "/maxi_concours/image6.png",
+      "/maxi_concours/image7.png",
+      "/maxi_concours/image8.png"
+    ],
+    "github": [
+      {
+        "name": "Front",
+        "value": "https://www.github.com/jonahrafit"
+      }
+    ],
     "live": "",
     "video": "",
     "description": "",

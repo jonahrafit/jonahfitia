@@ -1,18 +1,18 @@
 {
   "title": "My Skills",
   "description": "Here is an overview of the technologies and languages I regularly use to design and implement effective solutions.",
-  "skillList": [
+  "languages": [
     {
       "icon": "FaJava",
       "name": "Java"
     },
     {
-      "icon": "FaReact",
-      "name": "React.js"
+      "icon": "FaPhp",
+      "name": "PHP"
     },
     {
-      "icon": "DiPostgresql",
-      "name": "PostgreSQL"
+      "icon": "FaJs",
+      "name": "JavaScript"
     },
     {
       "icon": "FaHtml5",
@@ -23,20 +23,112 @@
       "name": "CSS3"
     },
     {
-      "icon": "FaJs",
-      "name": "JavaScript"
+      "icon": "SiTypescript",
+      "name": "TypeScript"
+    }
+  ],
+  "framework": [
+    {
+      "icon": "FaReact",
+      "name": "React.js"
     },
     {
       "icon": "FaNodeJs",
       "name": "Node.js"
     },
     {
+      "icon": "FaBootstrap",
+      "name": "Bootstrap"
+    },
+    {
+      "icon": "BiLogoSpringBoot",
+      "name": "Spring Boot"
+    },
+    {
+      "icon": "DiCodeigniter",
+      "name": "CodeIgniter"
+    },
+    {
+      "icon": "SiExpress",
+      "name": "Express.js"
+    },
+    {
+      "icon": "SiHibernate",
+      "name": "Hibernate"
+    }
+  ],
+  "database": [
+    {
+      "icon": "DiPostgresql",
+      "name": "PostgreSQL"
+    },
+    {
       "icon": "DiMysql",
       "name": "MySQL"
     },
     {
-      "icon": "FaPhp",
-      "name": "PHP"
+      "icon": "SiFirebase",
+      "name": "Firebase"
+    },
+    {
+      "icon": "SiMongodb",
+      "name": "MongoDB"
+    }
+  ],
+  "tools": [
+    {
+      "icon": "VscVscode",
+      "name": "VSCode"
+    },
+    {
+      "icon": "SiApachenetbeanside",
+      "name": "NetBeans"
+    },
+    {
+      "icon": "SiIntellijidea",
+      "name": "IntelliJ IDEA"
+    },
+    {
+      "icon": "SiAndroidstudio",
+      "name": "Android Studio"
+    },
+    {
+      "icon": "FaGithub",
+      "name": "GitHub"
+    },
+    {
+      "icon": "SiPostman",
+      "name": "Postman"
+    }
+  ],
+  "other": [
+    {
+      "icon": "FaWindows",
+      "name": "Windows"
+    },
+    {
+      "icon": "FaUbuntu",
+      "name": "Ubuntu"
+    },
+    {
+      "icon": "SiApachetomcat",
+      "name": "Tomcat"
+    },
+    {
+      "icon": "BsFiletypeScss",
+      "name": "SCSS"
+    },
+    {
+      "icon": "SiFigma",
+      "name": "Figma"
+    },
+    {
+      "icon": "SiAdobephotoshop",
+      "name": "Photoshop"
+    },
+    {
+      "icon": "SiBlender",
+      "name": "Blender"
     }
   ]
 }

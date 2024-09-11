@@ -1,17 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { BsArrowDownRight, BsArrowUpRight } from 'react-icons/bs';
 import Link from "next/link";
 import { motion } from "framer-motion";
 import projectData from "@/data/projects.json";
-import { Input } from "@/components/ui/input";
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip";
-import Image from "next/image";
 import iconMap from '@/context/iconMap';
-import { GoVideo } from "react-icons/go";
-import { FaGithub } from "react-icons/fa";
-import { TbWorld } from "react-icons/tb";
 import { ProjectItem } from "@/interface/ProjectItem";
 
 interface FilterButtonProps {
@@ -122,7 +115,7 @@ const Projects = () => {
                                     <div>
                                         {/* Bottom Left Title and Subtitle */}
                                         <div className="relative text-white z-20">
-                                            <Link target="_blank" href={"/projects/3"}>
+                                            <Link href={`/projects/${item.id}`}>
                                                 <h2 className="text-[25px] font-bold leading-none group-hover:text-accent transition-all duration-500">
                                                     {item.title}
                                                 </h2>
@@ -134,24 +127,6 @@ const Projects = () => {
                                                         <span key={index}>{tech}</span>
                                                     ))}
                                                 </div>
-                                                <div className="flex items-center space-x-2 text-2xl group-hover:text-accent">
-                                                    {item.video !== "" &&
-                                                        <Link target="_blank" href={item.video} title="Video">
-                                                            <GoVideo className="hover:scale-150 transition-transform duration-300" />
-                                                        </Link>
-                                                    }
-                                                    {item.github !== "" &&
-                                                        <Link target="_blank" href={item.github} title="Github">
-                                                            <FaGithub className="hover:scale-150 transition-transform duration-300" />
-                                                        </Link>
-                                                    }
-                                                    {item.live !== "" &&
-                                                        <Link target="_blank" href={item.live} title="Live">
-                                                            <TbWorld className="hover:scale-150 transition-transform duration-300" />
-                                                        </Link>
-                                                    }
-                                                </div>
-
                                             </div>
                                         </div>
                                     </div>

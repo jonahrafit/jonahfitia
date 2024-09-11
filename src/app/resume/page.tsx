@@ -190,7 +190,8 @@ const Resume = () => {
                                         className='object-contain'
                                     ></Image>
                                     <h3 className="text-4xl font-bold">{educations.title}</h3>
-                                </div><ScrollArea className="h-[400px]">
+                                </div>
+                                <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 gap-[20px]">
                                         {educations.items.map((item, index) => {
                                             return (
