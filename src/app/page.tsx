@@ -1,4 +1,5 @@
 // app/page.tsx
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -8,6 +9,14 @@ import Photo from '@/components/Photo';
 import Stats from '@/components/Stats';
 
 const Page: React.FC = () => {
+
+  const handleButtonClick = () => {
+    window.gtag('event', 'download', {
+      event_category: 'cv',
+      event_label: 'Download CV Button',
+    });
+  };
+
 
   return (
     <section className="h-full">
@@ -30,7 +39,7 @@ const Page: React.FC = () => {
               {/* Conteneur pour le bouton */}
               <div className="flex-grow flex items-end">
                 <div className="flex xl:justify-end justify-center w-full p-4">
-                  <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                  <Button onClick={handleButtonClick} variant="outline" size="lg" className="uppercase flex items-center gap-2">
                     <span>Download CV</span>
                     <FiDownload className="text-xl" />
                   </Button>
