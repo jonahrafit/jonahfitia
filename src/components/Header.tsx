@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         {/* desktop nav & hire me button*/}
         <div className='hidden xl:flex items-center gap-8'>
           <Nav links={links} />
-          <LanguageToggle />
+          {/* <LanguageToggle /> */}
         </div>
 
         {/* mobile nav */}

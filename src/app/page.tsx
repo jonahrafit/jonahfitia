@@ -25,11 +25,13 @@ const Page: React.FC = () => {
 
           {/* text */}
           <div className='text-center xl:text-left order-2 xl:order-none'>
-            <span className='text-xl'>FullStack Developer</span>
-            <h1 className='h1 mb-6'>
-              Hello I&rsquo;m <br /> <span className='text-accent'>Jonah Fitia </span>
+            <span className='text-xl'>Développeur Java & React</span>
+            <h1 className='h2 mb-6'>
+              Bonjour, je suis <br /> <span className='text-accent'>Jonah Fitia </span>
             </h1>
-            <p className='max-w-[500px] mb-9 text-white/80' >I&rsquo;m a FullStack Developer with a strong focus on Java and React. My expertise lies in building scalable backend solutions and crafting seamless user interfaces. I leverage modern frameworks and technologies to deliver robust, high-performing applications </p>
+            <p className='max-w-[500px] mb-9 text-white/80' >
+              Je suis un Développeur avec une forte spécialisation en Java et React. Mon expertise réside dans la construction de solutions backend évolutives et la création d'interfaces utilisateur fluides. J'utilise des frameworks et des technologies modernes pour livrer des applications robustes et performantes.
+            </p>
             <div className="flex flex-col">
               {/* Bord inférieur */}
               <div className="border-accent border-4 w-full">
@@ -40,7 +42,7 @@ const Page: React.FC = () => {
               <div className="flex-grow flex items-end">
                 <div className="flex xl:justify-end justify-center w-full p-4">
                   <Button onClick={handleButtonClick} variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                    <span>Download CV</span>
+                    <span>Télécharger CV</span>
                     <FiDownload className="text-xl" />
                   </Button>
                 </div>
@@ -58,9 +60,9 @@ const Page: React.FC = () => {
             <Social containerStyles='flex xl:flex-col flex-row gap-6' iconStyles='w-12 h-12 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500' />
           </div>
         </div>
-        <div>
+        {/* <div>
           <Stats />
-        </div>
+        </div> */}
       </div>
     </section>
   );
