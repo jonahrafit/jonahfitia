@@ -1,7 +1,7 @@
 // iconMap.tsx
 import { DiCodeigniter, DiMysql, DiMongodb, DiPostgresql, DiJavascript1 } from 'react-icons/di';
 import { FaHtml5, FaAngular, FaBootstrap, FaPhp, FaGithub, FaCss3, FaReact, FaJs, FaJava, FaNodeJs, FaCodeBranch, FaDatabase, FaMobileAlt, FaWindows, FaUbuntu, FaAndroid } from 'react-icons/fa';
-import { SiApachetomcat, SiQgis, SiIonic, SiOracle, SiCplusplus, SiCsharp, SiTypescript, SiAdobephotoshop, SiAndroidstudio, SiExpress, SiApachenetbeanside, SiHibernate, SiFirebase, SiMongodb, SiVisualstudio, SiIntellijidea, SiPostman, SiFigma, SiBlender } from 'react-icons/si';
+import { SiApachetomcat, SiQgis, SiIonic, SiOracle, SiCplusplus, SiCsharp, SiTypescript, SiAdobephotoshop, SiAndroidstudio, SiExpress, SiApachenetbeanside, SiHibernate, SiFirebase, SiMongodb, SiVisualstudio, SiIntellijidea, SiPostman, SiFigma, SiBlender, SiDotnet, SiMicrosoftsqlserver } from "react-icons/si";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { BsFiletypeScss } from "react-icons/bs";
 import { VscVscode } from "react-icons/vsc";
@@ -52,7 +52,11 @@ const iconMap: { [key: string]: JSX.Element } = {
 
     VscVscode: <VscVscode />,
 
-    BsFiletypeScss: <BsFiletypeScss />
+    BsFiletypeScss: <BsFiletypeScss />,
+    
+    SiDotnet: <SiDotnet />, // Icône pour .NET
+    SiMicrosoftsqlserver: <SiMicrosoftsqlserver /> // Icône pour SQL Server (si disponible)
+
 
 
 };

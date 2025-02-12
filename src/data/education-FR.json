@@ -3,12 +3,21 @@
   "title": "Mon parcours scolaire",
   "items": [
     {
+      "icon": "/unica.jpg",
+      "institute": "Université Côte d'Azur",
+      "degree": "Master II, MIAGE MBDS",
+      "adress": "",
+      "startDate": "2024-12",
+      "endDate": null,
+      "description": []
+    },
+    {
       "icon": "/itu.jpeg",
       "institute": "IT University",
       "degree": "Master I, Ingénierie Logicielle",
       "adress": "Andoharanofotsy Antananarivo, Madagascar",
       "startDate": "2023-12",
-      "endDate": null,
+      "endDate": "2024-08",
       "description": []
     },
     {

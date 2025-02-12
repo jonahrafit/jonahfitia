@@ -1,22 +1,34 @@
 [
   {
     "id": 1,
-    "title": "PARKEO",
-    "subtitle": "Système de gestion de parking",
+    "title": "Picnic Finder",
+    "subtitle": "Application web  pour trouver des espaces pour un picnic",
     "type": "WEB",
-    "technologies": ["DiCodeigniter", "DiMysql"],
-    "imageShow": "",
-    "image": [],
+    "technologies": [
+      "SiDotnet",
+      "SiMicrosoftsqlserver"
+    ],
+    "imageShow": "/picnicfinder/image3.png",
+    "image": [
+      "/picnicfinder/image1.png",
+      "/picnicfinder/image2.png",
+      "/picnicfinder/image3.png",
+      "/picnicfinder/image4.png"
+    ],
     "github": [
       {
         "name": "Front",
-        "value": "https://github.com/jonahrafit/easy.park"
+        "value": "https://github.com/jonahrafit/PicnicFinder"
       }
     ],
     "live": "",
     "video": "",
     "description": "",
-    "fonctionnality": [],
+    "fonctionnality": [
+      "Recherche un espaces par leur activité disponible",
+      "Faire et approuver ou annuler reservations",
+      "Mini-dashboard sur les écrans des prorpietaire"
+    ],
     "challenges_met": [],
     "role": []
   },
@@ -25,76 +37,16 @@
     "title": "Mada Tour",
     "subtitle": "Application mobile des sites touristiques de Madagascar",
     "type": "MOBILE",
-    "technologies": ["SiAndroidstudio", "SiMongodb"],
-    "imageShow": "",
-    "image": [],
-    "github": [
-      {
-        "name": "Front",
-        "value": "https://github.com/jonahrafit/"
-      }
+    "technologies": [
+      "SiAndroidstudio",
+      "SiMongodb"
     ],
-    "live": "",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
-    "id": 3,
-    "title": "VEHICULO",
-    "subtitle": "Gestion et suivi de véhicules",
-    "type": "WEB",
-    "technologies": ["DiCodeigniter", "DiMysql"],
     "imageShow": "",
     "image": [],
     "github": [
       {
         "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
-      }
-    ],
-    "live": "li",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
-    "id": 4,
-    "title": "Référencement SEO",
-    "subtitle": "Réferencement et Optimisation Site web",
-    "type": "OTHER",
-    "technologies": [],
-    "imageShow": "",
-    "image": [],
-    "github": [
-      {
-        "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
-      }
-    ],
-    "live": "li",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
-    "id": 5,
-    "title": "Gestion Signalement",
-    "subtitle": "Système de gestion des signalements",
-    "type": "WEB",
-    "technologies": ["FaReact", "DiMysql", "DiMongodb", "SiIonic"],
-    "imageShow": "",
-    "image": [],
-    "github": [
-      {
-        "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
+        "value": "https://github.com/890Tom/Projet_Cloud"
       }
     ],
     "live": "",
@@ -109,7 +61,12 @@
     "title": "GASY MANJA",
     "subtitle": "Application web d'un salon de beauté",
     "type": "WEB",
-    "technologies": ["DiMongodb", "SiExpress", "FaAngular", "FaNodeJs"],
+    "technologies": [
+      "DiMongodb",
+      "SiExpress",
+      "FaAngular",
+      "FaNodeJs"
+    ],
     "imageShow": "/gasy_manja/image12.png",
     "image": [
       "/gasy_manja/image1.png",
@@ -146,32 +103,14 @@
     "role": []
   },
   {
-    "id": 7,
-    "title": "Energie renouvelable",
-    "subtitle": "Système d'énergie renouvelable",
-    "type": "DESKTOP",
-    "technologies": ["SiCsharp"],
-    "imageShow": "",
-    "image": [],
-    "github": [
-      {
-        "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
-      }
-    ],
-    "live": "",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
     "id": 8,
     "title": "Projet TAXIBE",
     "subtitle": "Trouver tous les points d'arrêts bus",
     "type": "DESKTOP",
-    "technologies": ["SiQgis", "DiPostgresql"],
+    "technologies": [
+      "SiQgis",
+      "DiPostgresql"
+    ],
     "imageShow": "",
     "image": [],
     "github": [],
@@ -183,96 +122,48 @@
     "role": []
   },
   {
-    "id": 9,
-    "title": "CovidMada",
-    "subtitle": "Application de suivi du Covid à Madagascar",
-    "type": "DESKTOP",
-    "technologies": ["SiCplusplus"],
-    "imageShow": "",
-    "image": [],
-    "github": [
-      {
-        "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
-      }
-    ],
-    "live": "",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
-    "id": 10,
-    "title": "Etat dynamique Mada",
-    "subtitle": "Système dynamique pour Madagascar",
-    "type": "DESKTOP",
-    "technologies": ["SiOracle", "FaJava"],
-    "imageShow": "",
-    "image": [],
-    "github": [
-      {
-        "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
-      }
-    ],
-    "live": "",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
-    "id": 11,
-    "title": "Mini-jeu SOCKET",
-    "subtitle": "Jeu client-serveur en Java",
-    "type": "DESKTOP",
-    "technologies": ["FaJava"],
-    "imageShow": "",
-    "image": [],
-    "github": [
-      {
-        "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
-      }
-    ],
-    "live": "",
-    "video": "",
-    "description": "",
-    "fonctionnality": [],
-    "challenges_met": [],
-    "role": []
-  },
-  {
     "id": 12,
     "title": "GIPA",
     "subtitle": "Gestion intégré des patients et des actes",
     "type": "WEB",
-    "technologies": ["FaReact", "FaJava", "DiPostgresql"],
+    "technologies": [
+      "FaReact",
+      "FaJava",
+      "DiPostgresql"
+    ],
     "imageShow": "",
     "image": [],
     "github": [
       {
         "name": "Front",
-        "value": "https://www.github.com/jonahrafit"
+        "value": "https://github.com/jonahrafit/Stage-DGFS-FRONTOFFICE"
+      },
+      {
+        "name": "Back",
+        "value": "https://github.com/jonahrafit/Stage-DGFS-BACKOFFICE"
       }
     ],
     "live": "",
     "video": "",
-    "description": "",
-    "fonctionnality": [],
+    "description": "application web pour la gestion des patients dans un etablissement de santé",
+    "fonctionnality": [
+      "visualisation etat de chambres",
+      "Suivi des dossier des patients",
+      "Export pdf pour les dossiers utiles en papier physique"
+    ],
     "challenges_met": [],
     "role": []
   },
-
   {
     "id": 13,
     "title": "MAXI CONCOURS",
     "subtitle": "Application de manipulation de l'argent en ligne",
     "type": "WEB",
-    "technologies": ["FaReact", "FaNodeJs", "DiMysql"],
+    "technologies": [
+      "FaReact",
+      "FaNodeJs",
+      "DiMysql"
+    ],
     "imageShow": "/maxi_concours/image6.png",
     "image": [
       "/maxi_concours/image1.png",
